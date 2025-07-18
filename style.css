@@ -1,81 +1,91 @@
-/* Reset styles */
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Basic body styles */
 body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  line-height: 1.6;
+  font-family: "Arial", sans-serif;
   background: #f7f7f7;
   color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Generic containers */
+header, section, footer {
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 /* Header */
 header {
   text-align: center;
-  padding: 20px 0;
-  background: #4CAF50;
+  background-color: #4CAF50;
   color: white;
-  border-radius: 10px;
 }
 
-/* About section */
-.about {
+header h1 {
+  font-size: 2rem;
+}
+
+header p {
+  font-size: 1rem;
+}
+
+/* About Section */
+.about-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: white;
-  margin-top: 20px;
-  padding: 20px;
-  border-radius: 10px;
+  gap: 20px;
 }
 
-.about img {
+.about-photo {
   width: 150px;
   border-radius: 50%;
-  margin-bottom: 15px;
+  overflow: hidden;
 }
 
-.about div {
+.about-text {
   text-align: center;
+  max-width: 600px;
 }
 
-/* Projects section */
-.projects {
-  background: white;
-  margin-top: 20px;
-  padding: 20px;
-  border-radius: 10px;
-}
-
+/* Projects */
 .projects ul {
-  margin-top: 10px;
   padding-left: 20px;
+  list-style-type: disc;
 }
 
+.projects li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  margin-top: 30px;
+  font-size: 0.9rem;
   color: #555;
 }
 
-/* Responsive for tablets and larger */
+/* Media Query: Tablets and Up */
 @media (min-width: 768px) {
-  .about {
+  .about-section {
     flex-direction: row;
-    gap: 20px;
+    justify-content: center;
     text-align: left;
   }
 
-  .about img {
-    margin-bottom: 0;
+  .about-photo {
+    width: 200px;
   }
 
-  .about div {
+  .about-text {
     flex: 1;
   }
 }
